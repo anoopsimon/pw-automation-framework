@@ -5,7 +5,7 @@ Automation framework built using playwright
 
 
 - Design pattern - Page Object Model
-- Execution & Reporting: Uses JEST HTML reporting
+- Execution & Reporting: Jest HTML reporting
 - Commands wrapper for better control and customization.
 - Docker support
 - CI support
