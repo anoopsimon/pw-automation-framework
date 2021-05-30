@@ -21,7 +21,7 @@ export class SearchPage extends BasePage
     {        
       let resultsLocator ='.sb_count';
       const content = await this.text(resultsLocator);
-      expect(content).toContain('results');
+      expect(content).toContain('SSSresults');
       await this.elementScreenshot(resultsLocator);
       await this.screenshot(true);
       await addAttach(await this.page.screenshot(), "Screenshot");
