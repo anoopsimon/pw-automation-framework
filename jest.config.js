@@ -18,7 +18,7 @@ module.exports = {
         {
             browsers: ["chromium"],
             launchOptions: {
-                headless: false,
+                headless: true,
                 //slowMo: 0,
                 devtools: false,
 
