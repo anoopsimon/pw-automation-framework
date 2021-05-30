@@ -8,7 +8,7 @@ Automation framework built using playwright
 - Execution & Reporting: Jest HTML reporting
 - Commands wrapper for better control and customization.
 - Docker support
-- CI support
+- CI support - github actions
 
 
 
