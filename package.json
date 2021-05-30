@@ -1,0 +1,24 @@
+{
+  "jest": {
+    "preset": "jest-playwright-preset"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "name": "pw-ui-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^27.0.3",
+    "jest-playwright-preset": "^1.6.0-rc4",
+    "playwright": "^1.11.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "ts-jest": "^27.0.1",
+    "typescript": "^4.3.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
