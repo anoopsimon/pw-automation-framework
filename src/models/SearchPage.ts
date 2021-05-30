@@ -8,8 +8,8 @@ export class SearchPage extends BasePage
     super(page);
       this.page = page;
     }
-    async navigate() {
-      await this.goto('https://www.bing.com/');
+    async navigate(url:string) {
+      await this.goto(url);
     }
     async search(text) {        
         await this.fill('#sb_form_q',text);

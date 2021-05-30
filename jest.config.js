@@ -9,7 +9,7 @@ module.exports = {
         ["jest-html-reporters", {
             "publicPath": "./html-report",
             "filename": "report.html",
-            "expand": true,
+            "expand": false,
             "openReport": true
         }]
     ],
@@ -18,7 +18,7 @@ module.exports = {
         {
             browsers: ["chromium"],
             launchOptions: {
-                headless: true,
+                headless: false,
                 //slowMo: 0,
                 devtools: false,
 
