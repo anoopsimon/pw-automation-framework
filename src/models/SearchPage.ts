@@ -13,7 +13,17 @@ export class SearchPage extends BasePage
     }
     async search(text) {        
         await this.fill('#sb_form_q',text);
-        await this.press('#sb_form_q','Enter');     
+        await this.press('#sb_form_q','Enter'); 
+        await this.screenshot(true);
+    }
+
+    async verifyResult() 
+    {        
+      let resultsLocator ='.sb_count';
+      const content = await this.text(resultsLocator);
+      expect(content).toContain('results');
+      await this.elementScreenshot(resultsLocator);
+      await this.screenshot(true);
     }
   }
 
