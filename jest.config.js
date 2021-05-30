@@ -4,13 +4,26 @@ module.exports = {
     transform: {
         "^.+\\.(ts)$": "ts-jest",
     },
+    reporters: [
+        "default",
+        ["jest-html-reporters", {
+            "publicPath": "./html-report",
+            "filename": "report.html",
+            "expand": true,
+            "openReport": true
+        }]
+    ],
     testEnvironmentOptions: {
-        "jest-playwright": 
+        "jest-playwright":
         {
             browsers: ["chromium"],
             launchOptions: {
-                headless: false,
-              }
+                headless: true,
+                //slowMo: 0,
+                devtools: false,
+
+            }
+           
         }
     }
 };

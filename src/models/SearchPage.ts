@@ -1,6 +1,6 @@
 import { Page } from "playwright";
 import { BasePage } from "../core/BasePage";
-
+import { addAttach  } from "jest-html-reporters/helper";
 export class SearchPage extends BasePage
 {
     page: Page;
@@ -24,6 +24,8 @@ export class SearchPage extends BasePage
       expect(content).toContain('results');
       await this.elementScreenshot(resultsLocator);
       await this.screenshot(true);
+      await addAttach(await this.page.screenshot(), "Screenshot");
+
     }
   }
 

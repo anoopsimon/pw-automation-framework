@@ -6,3 +6,5 @@ declare global
   const browser: Browser;
   const browserName: string;
 }
+
+export default global;
