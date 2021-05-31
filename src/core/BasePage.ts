@@ -1,15 +1,18 @@
 import { Page } from "playwright";
 import { Guid } from "guid-typescript";
-
+import * as logins from '../data/logins.json';
+import * as search from '../data/search.json';
 
 export class BasePage
 {
 defaultScreenshotDirectory:string;
 page:Page;
+td_logins = () => logins
+td_search= () => search
 constructor(page)
 {
     this.page = page;
-    this.defaultScreenshotDirectory='C:/Temp';
+    this.defaultScreenshotDirectory = 'C:/Temp';
 }
 
 async goto(url:string) {
