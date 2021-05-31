@@ -6,7 +6,7 @@ function getPage<T>(type: { new (args:any): T }, args): T {
 }
 
 /**To verify Search functionality in Bing. */
-it.each(search.searchTermsGeneric)("Verify Bing Search", async (data) => 
+it.each(search.searchTermCoding)("Verify Bing Search", async (data) => 
 {  
     const searchPage = getPage(SearchPage,page);
     var appUrl='https://www.bing.com/';
