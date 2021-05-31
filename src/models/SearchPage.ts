@@ -11,7 +11,8 @@ export class SearchPage extends BasePage
     async navigate(url:string) {
       await this.goto(url);
     }
-    async search(text) {        
+    async search(text) {      
+        console.log('Search ' + text);  
         await this.fill('#sb_form_q',text);
         await this.press('#sb_form_q','Enter'); 
         await this.screenshot(true);
