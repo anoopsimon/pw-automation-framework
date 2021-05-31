@@ -10,8 +10,8 @@ export class SearchPage extends BasePage {
   async navigate(url: string) {
     await this.goto(url);
   }
-  async search() {
-    var searchTerm = this.td_search().searchTerms[0];
+  async search(searchTerm) {
+   // var searchTerm = this.td_search().searchTerms[0];
     console.log('Search ' + searchTerm);
     await this.fill('#sb_form_q', searchTerm);
     await this.press('#sb_form_q', 'Enter');
