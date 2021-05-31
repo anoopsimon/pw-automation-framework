@@ -8,16 +8,8 @@ constructor()
 
 }
 
-logins()
-{
-    console.log(logins[0].username);
-    return logins;
-}
+logins = () => logins
 
-search()
-{
-    console.log(search.searchTerms);
-    return search;
-}
+search= () => search
 
 }
