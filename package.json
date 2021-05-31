@@ -1,13 +1,13 @@
 {
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "jest": {
     "preset": "jest-playwright-preset"
   },
   "scripts": {
     "test": "jest",
-    
-    "lint": "node_modules/.bin/"
-
+    "lint": ""
   },
   "name": "pw-ui-framework",
   "version": "1.0.0",
@@ -20,12 +20,22 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
-    "goodparts": "^1.3.0",
     "jest-html-reporters": "^2.1.6",
     "ts-jest": "^27.0.1",
     "typescript": "^4.3.2"
   },
-  "author": "",
+  "author": "Anoop Simon",
   "license": "ISC",
-  "description": ""
+  "description": "Javascript UI automation framework built using PlayWright",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/automationio/pw-automation-framework.git"
+  },
+  "keywords": [
+    "playwright"
+  ],
+  "bugs": {
+    "url": "https://github.com/automationio/pw-automation-framework/issues"
+  },
+  "homepage": "https://github.com/automationio/pw-automation-framework#readme"
 }
