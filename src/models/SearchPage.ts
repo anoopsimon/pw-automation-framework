@@ -1,32 +1,39 @@
 import { Page } from "playwright";
 import { BasePage } from "../core/BasePage";
-import { addAttach,addMsg } from "jest-html-reporters/helper";
 export class SearchPage extends BasePage {
   page: Page;
-  constructor(page) {
+
+  constructor(page:Page) 
+  {
     super(page);
     this.page = page;
   }
   async navigate(url: string) {
     await this.goto(url);
   }
-  async search(searchTerm) {
-   // var searchTerm = this.td_search().searchTerms[0];
-    console.log('Search ' + searchTerm);
+
+  /**
+   * Search in bing search page using a search term and capture screenshot.
+   * @param searchTerm 
+   */
+  async search(searchTerm:string) {
+    this.log('Search in Bing using term => ' + searchTerm);
     await this.fill('#sb_form_q', searchTerm);
     await this.press('#sb_form_q', 'Enter');
     await this.screenshot(true);
   }
 
+  /**
+   * Verify that the search result displayed.
+   */
   async verifyResult() {
     let resultsLocator = '.sb_count';
     const content = await this.text(resultsLocator);
     expect(content).toContain('results');
     await this.elementScreenshot(resultsLocator);
     await this.screenshot(true);
-    await addAttach(await this.page.screenshot(), "Screenshot");
-    await addMsg('Testing completed with pass');
-
+    await this.attachScreenshot('Search Result');
+    await this.log('Verification passed for search term ');
 
   }
 }
