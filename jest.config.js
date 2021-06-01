@@ -1,9 +1,14 @@
 module.exports = {
+    rootDir: '.',
     preset: "jest-playwright-preset",
-    testMatch: ["**/__tests__/**/*.+(ts|js)", "**/?(*.)+(spec|test).+(ts|js)"],
+    testMatch: 
+    [
+    "<rootDir>/src/__tests__/*.spec.ts"    
+    ],
     transform: {
         "^.+\\.(ts)$": "ts-jest",
     },
+    testTimeout: 20000,
     reporters: [
         "default",
         ["jest-html-reporters", {

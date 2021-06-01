@@ -1,6 +1,6 @@
 import { Page } from "playwright";
 import { BasePage } from "../core/BasePage";
-import { addAttach } from "jest-html-reporters/helper";
+import { addAttach,addMsg } from "jest-html-reporters/helper";
 export class SearchPage extends BasePage {
   page: Page;
   constructor(page) {
@@ -25,6 +25,8 @@ export class SearchPage extends BasePage {
     await this.elementScreenshot(resultsLocator);
     await this.screenshot(true);
     await addAttach(await this.page.screenshot(), "Screenshot");
+    await addMsg('Testing completed with pass');
+
 
   }
 }
