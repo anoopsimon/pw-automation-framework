@@ -1,5 +1,5 @@
 # Playwright -automation-framework
-Javascript UI automation framework built using PlayWright
+Javascript UI automation framework built using PlayWright.
 
 ![example workflow](https://github.com/automationio/pw-automation-framework/actions/workflows/node.js.yml/badge.svg)
 
